@@ -1,0 +1,90 @@
+##IAR Ninja build file
+
+
+#Rules
+rule COMPILER_XCL
+  command = C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\common\bin\XclFileGenerator.exe $xclcommand -f "$rspfile_name"
+  description = IAR_NEW_TOOL+++COMPILER_XCL+++$in+++"C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\common\bin\XclFileGenerator.exe" $flags
+  rspfile = $rspfile_name
+  rspfile_content = $flags
+
+rule INDEXER
+  command = C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\common\bin\SourceIndexer.exe $flags
+  depfile = $out.dep
+  description = IAR_NEW_TOOL+++INDEXER+++$out+++"C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\common\bin\SourceIndexer.exe" $flags
+
+rule MAKEBROWSE
+  command = C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\common\bin\makeBrowseData.exe $flags
+  description = IAR_NEW_TOOL+++MAKEBROWSE+++$out+++"C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\common\bin\makeBrowseData.exe" $flags
+
+rule PDBLINK
+  command = C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\common\bin\PbdLink.exe $flags
+  description = IAR_NEW_TOOL+++PDBLINK+++$out+++"C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\common\bin\PbdLink.exe" $flags
+
+
+
+#Build steps
+build C$:\Users\murashov_ev\work\disco\Debug\BrowseInfo\gpio.xcl : COMPILER_XCL 
+  xclcommand = -source_file C$:\Users\murashov_ev\work\disco\gpio.c -xcl_file C$:\Users\murashov_ev\work\disco\Debug\BrowseInfo\gpio.xcl -macro_file C$:\Users\murashov_ev\work\disco\Debug\BrowseInfo\gpio.tmp -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\bin\iccarm.exe"
+  flags = C$:\Users\murashov_ev\work\disco\gpio.c -D STM32F3xx -D STM32F303xC -D STM32F30xC -o C$:\Users\murashov_ev\work\disco\Debug\Obj\ --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=VFPv4_sp --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\inc\c\DLib_Config_Full.h" -I C$:\Users\murashov_ev\work\disco\..\inc\ -I C$:\Users\murashov_ev\work\disco\STM32CubeF3\Drivers\CMSIS\Device\ST\STM32F3xx\Include\ -I C$:\Users\murashov_ev\work\disco\STM32CubeF3\Drivers\CMSIS\Include\ -I C$:\Users\murashov_ev\work\disco\STM32CubeF3\Drivers\STM32F3xx_HAL_Driver\Inc\ -On -I "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\CMSIS\Core\Include\\" -I "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\CMSIS\DSP\Include\\" --predef_macros C$:\Users\murashov_ev\work\disco\Debug\BrowseInfo\gpio.tmp
+  rspfile_name = C$:\Users\murashov_ev\work\disco\Debug\BrowseInfo\gpio.xcl.rsp
+
+build C$:\Users\murashov_ev\work\disco\Debug\BrowseInfo\gyro.xcl : COMPILER_XCL 
+  xclcommand = -source_file C$:\Users\murashov_ev\work\disco\gyro.c -xcl_file C$:\Users\murashov_ev\work\disco\Debug\BrowseInfo\gyro.xcl -macro_file C$:\Users\murashov_ev\work\disco\Debug\BrowseInfo\gyro.tmp -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\bin\iccarm.exe"
+  flags = C$:\Users\murashov_ev\work\disco\gyro.c -D STM32F3xx -D STM32F303xC -D STM32F30xC -o C$:\Users\murashov_ev\work\disco\Debug\Obj\ --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=VFPv4_sp --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\inc\c\DLib_Config_Full.h" -I C$:\Users\murashov_ev\work\disco\..\inc\ -I C$:\Users\murashov_ev\work\disco\STM32CubeF3\Drivers\CMSIS\Device\ST\STM32F3xx\Include\ -I C$:\Users\murashov_ev\work\disco\STM32CubeF3\Drivers\CMSIS\Include\ -I C$:\Users\murashov_ev\work\disco\STM32CubeF3\Drivers\STM32F3xx_HAL_Driver\Inc\ -On -I "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\CMSIS\Core\Include\\" -I "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\CMSIS\DSP\Include\\" --predef_macros C$:\Users\murashov_ev\work\disco\Debug\BrowseInfo\gyro.tmp
+  rspfile_name = C$:\Users\murashov_ev\work\disco\Debug\BrowseInfo\gyro.xcl.rsp
+
+build C$:\Users\murashov_ev\work\disco\Debug\BrowseInfo\main.xcl : COMPILER_XCL 
+  xclcommand = -source_file C$:\Users\murashov_ev\work\disco\main.c -xcl_file C$:\Users\murashov_ev\work\disco\Debug\BrowseInfo\main.xcl -macro_file C$:\Users\murashov_ev\work\disco\Debug\BrowseInfo\main.tmp -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\bin\iccarm.exe"
+  flags = C$:\Users\murashov_ev\work\disco\main.c -D STM32F3xx -D STM32F303xC -D STM32F30xC -o C$:\Users\murashov_ev\work\disco\Debug\Obj\ --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=VFPv4_sp --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\inc\c\DLib_Config_Full.h" -I C$:\Users\murashov_ev\work\disco\..\inc\ -I C$:\Users\murashov_ev\work\disco\STM32CubeF3\Drivers\CMSIS\Device\ST\STM32F3xx\Include\ -I C$:\Users\murashov_ev\work\disco\STM32CubeF3\Drivers\CMSIS\Include\ -I C$:\Users\murashov_ev\work\disco\STM32CubeF3\Drivers\STM32F3xx_HAL_Driver\Inc\ -On -I "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\CMSIS\Core\Include\\" -I "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\CMSIS\DSP\Include\\" --predef_macros C$:\Users\murashov_ev\work\disco\Debug\BrowseInfo\main.tmp
+  rspfile_name = C$:\Users\murashov_ev\work\disco\Debug\BrowseInfo\main.xcl.rsp
+
+build C$:\Users\murashov_ev\work\disco\Debug\BrowseInfo\stm32f3xx_it.xcl : COMPILER_XCL 
+  xclcommand = -source_file C$:\Users\murashov_ev\work\disco\stm32f3xx_it.c -xcl_file C$:\Users\murashov_ev\work\disco\Debug\BrowseInfo\stm32f3xx_it.xcl -macro_file C$:\Users\murashov_ev\work\disco\Debug\BrowseInfo\stm32f3xx_it.tmp -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\bin\iccarm.exe"
+  flags = C$:\Users\murashov_ev\work\disco\stm32f3xx_it.c -D STM32F3xx -D STM32F303xC -D STM32F30xC -o C$:\Users\murashov_ev\work\disco\Debug\Obj\ --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=VFPv4_sp --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\inc\c\DLib_Config_Full.h" -I C$:\Users\murashov_ev\work\disco\..\inc\ -I C$:\Users\murashov_ev\work\disco\STM32CubeF3\Drivers\CMSIS\Device\ST\STM32F3xx\Include\ -I C$:\Users\murashov_ev\work\disco\STM32CubeF3\Drivers\CMSIS\Include\ -I C$:\Users\murashov_ev\work\disco\STM32CubeF3\Drivers\STM32F3xx_HAL_Driver\Inc\ -On -I "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\CMSIS\Core\Include\\" -I "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\CMSIS\DSP\Include\\" --predef_macros C$:\Users\murashov_ev\work\disco\Debug\BrowseInfo\stm32f3xx_it.tmp
+  rspfile_name = C$:\Users\murashov_ev\work\disco\Debug\BrowseInfo\stm32f3xx_it.xcl.rsp
+
+build C$:\Users\murashov_ev\work\disco\Debug\BrowseInfo\tim.xcl : COMPILER_XCL 
+  xclcommand = -source_file C$:\Users\murashov_ev\work\disco\tim.c -xcl_file C$:\Users\murashov_ev\work\disco\Debug\BrowseInfo\tim.xcl -macro_file C$:\Users\murashov_ev\work\disco\Debug\BrowseInfo\tim.tmp -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\bin\iccarm.exe"
+  flags = C$:\Users\murashov_ev\work\disco\tim.c -D STM32F3xx -D STM32F303xC -D STM32F30xC -o C$:\Users\murashov_ev\work\disco\Debug\Obj\ --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=VFPv4_sp --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\inc\c\DLib_Config_Full.h" -I C$:\Users\murashov_ev\work\disco\..\inc\ -I C$:\Users\murashov_ev\work\disco\STM32CubeF3\Drivers\CMSIS\Device\ST\STM32F3xx\Include\ -I C$:\Users\murashov_ev\work\disco\STM32CubeF3\Drivers\CMSIS\Include\ -I C$:\Users\murashov_ev\work\disco\STM32CubeF3\Drivers\STM32F3xx_HAL_Driver\Inc\ -On -I "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\CMSIS\Core\Include\\" -I "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\CMSIS\DSP\Include\\" --predef_macros C$:\Users\murashov_ev\work\disco\Debug\BrowseInfo\tim.tmp
+  rspfile_name = C$:\Users\murashov_ev\work\disco\Debug\BrowseInfo\tim.xcl.rsp
+
+build C$:\Users\murashov_ev\work\disco\Debug\BrowseInfo\gpio.pbi : INDEXER C$:\Users\murashov_ev\work\disco\Debug\BrowseInfo\gpio.xcl |  $
+C$:\Users\murashov_ev\work\disco\gpio.c
+  flags = -out=C$:\Users\murashov_ev\work\disco\Debug\BrowseInfo\gpio.pbi -f C$:\Users\murashov_ev\work\disco\Debug\BrowseInfo\gpio.xcl
+
+build C$:\Users\murashov_ev\work\disco\Debug\BrowseInfo\gyro.pbi : INDEXER C$:\Users\murashov_ev\work\disco\Debug\BrowseInfo\gyro.xcl |  $
+C$:\Users\murashov_ev\work\disco\gyro.c
+  flags = -out=C$:\Users\murashov_ev\work\disco\Debug\BrowseInfo\gyro.pbi -f C$:\Users\murashov_ev\work\disco\Debug\BrowseInfo\gyro.xcl
+
+build C$:\Users\murashov_ev\work\disco\Debug\BrowseInfo\main.pbi : INDEXER C$:\Users\murashov_ev\work\disco\Debug\BrowseInfo\main.xcl |  $
+C$:\Users\murashov_ev\work\disco\main.c
+  flags = -out=C$:\Users\murashov_ev\work\disco\Debug\BrowseInfo\main.pbi -f C$:\Users\murashov_ev\work\disco\Debug\BrowseInfo\main.xcl
+
+build C$:\Users\murashov_ev\work\disco\Debug\BrowseInfo\stm32f3xx_it.pbi : INDEXER C$:\Users\murashov_ev\work\disco\Debug\BrowseInfo\stm32f3xx_it.xcl |  $
+C$:\Users\murashov_ev\work\disco\stm32f3xx_it.c
+  flags = -out=C$:\Users\murashov_ev\work\disco\Debug\BrowseInfo\stm32f3xx_it.pbi -f C$:\Users\murashov_ev\work\disco\Debug\BrowseInfo\stm32f3xx_it.xcl
+
+build C$:\Users\murashov_ev\work\disco\Debug\BrowseInfo\tim.pbi : INDEXER C$:\Users\murashov_ev\work\disco\Debug\BrowseInfo\tim.xcl |  $
+C$:\Users\murashov_ev\work\disco\tim.c
+  flags = -out=C$:\Users\murashov_ev\work\disco\Debug\BrowseInfo\tim.pbi -f C$:\Users\murashov_ev\work\disco\Debug\BrowseInfo\tim.xcl
+
+build C$:\Users\murashov_ev\work\disco\Debug\BrowseInfo\discovery.pbw : MAKEBROWSE C$:\Users\murashov_ev\work\disco\Debug\BrowseInfo\discovery.pbd
+  flags = C$:\Users\murashov_ev\work\disco\Debug\BrowseInfo\discovery.pbd -output C$:\Users\murashov_ev\work\disco\Debug\BrowseInfo\discovery.pbw
+
+build C$:\Users\murashov_ev\work\disco\Debug\BrowseInfo\discovery_part0.pbi : PDBLINK C$:\Users\murashov_ev\work\disco\Debug\BrowseInfo\gpio.pbi |  $
+C$:\Users\murashov_ev\work\disco\Debug\BrowseInfo\gyro.pbi
+  flags = -M C$:\Users\murashov_ev\work\disco\Debug\BrowseInfo\discovery_part0.pbi C$:\Users\murashov_ev\work\disco\Debug\BrowseInfo\gpio.pbi C$:\Users\murashov_ev\work\disco\Debug\BrowseInfo\gyro.pbi
+
+build C$:\Users\murashov_ev\work\disco\Debug\BrowseInfo\discovery_part1.pbi : PDBLINK C$:\Users\murashov_ev\work\disco\Debug\BrowseInfo\main.pbi |  $
+C$:\Users\murashov_ev\work\disco\Debug\BrowseInfo\stm32f3xx_it.pbi
+  flags = -M C$:\Users\murashov_ev\work\disco\Debug\BrowseInfo\discovery_part1.pbi C$:\Users\murashov_ev\work\disco\Debug\BrowseInfo\main.pbi C$:\Users\murashov_ev\work\disco\Debug\BrowseInfo\stm32f3xx_it.pbi
+
+build C$:\Users\murashov_ev\work\disco\Debug\BrowseInfo\discovery_part2.pbi : PDBLINK C$:\Users\murashov_ev\work\disco\Debug\BrowseInfo\tim.pbi
+  flags = -M C$:\Users\murashov_ev\work\disco\Debug\BrowseInfo\discovery_part2.pbi C$:\Users\murashov_ev\work\disco\Debug\BrowseInfo\tim.pbi
+
+build C$:\Users\murashov_ev\work\disco\Debug\BrowseInfo\discovery.pbd : PDBLINK C$:\Users\murashov_ev\work\disco\Debug\BrowseInfo\discovery_part0.pbi |  $
+C$:\Users\murashov_ev\work\disco\Debug\BrowseInfo\discovery_part1.pbi $
+C$:\Users\murashov_ev\work\disco\Debug\BrowseInfo\discovery_part2.pbi
+  flags = -M C$:\Users\murashov_ev\work\disco\Debug\BrowseInfo\discovery.pbd C$:\Users\murashov_ev\work\disco\Debug\BrowseInfo\discovery_part0.pbi C$:\Users\murashov_ev\work\disco\Debug\BrowseInfo\discovery_part1.pbi C$:\Users\murashov_ev\work\disco\Debug\BrowseInfo\discovery_part2.pbi
+
