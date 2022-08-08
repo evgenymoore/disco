@@ -1,6 +1,6 @@
 ###############################################################################
 #
-# IAR ELF Linker V9.20.1.318/W64 for ARM                  05/Aug/2022  16:23:30
+# IAR ELF Linker V9.20.1.318/W64 for ARM                  08/Aug/2022  15:46:42
 # Copyright 2007-2021 IAR Systems AB.
 #
 #    Output file  =  C:\Users\murashov_ev\work\disco\Debug\Exe\discovery.out
@@ -66,16 +66,16 @@ No sections matched the following patterns:
                              - 0x800'0188   0x188
 
 "P1":                                       0xbb3
-  .text              ro code   0x800'0188   0x246  gyro.o [1]
-  .text              ro code   0x800'03ce    0x3a  packbits_init_single.o [4]
-  .text              ro code   0x800'0408   0x230  stm32f3xx_it.o [1]
-  .text              ro code   0x800'0638    0x48  FltToDbl.o [3]
-  .text              ro code   0x800'0680   0x1aa  DblMul.o [3]
-  .text              ro code   0x800'082c    0x68  DblToFlt.o [3]
-  .text              ro code   0x800'0894   0x134  gpio.o [1]
-  .text              ro code   0x800'09c8    0xb4  system_stm32f3xx.o [1]
-  .text              ro code   0x800'0a7c    0xa4  tim.o [1]
-  .text              ro code   0x800'0b20    0x38  main.o [1]
+  .text              ro code   0x800'0188   0x242  gyro.o [1]
+  .text              ro code   0x800'03ca    0x3a  packbits_init_single.o [4]
+  .text              ro code   0x800'0404   0x230  stm32f3xx_it.o [1]
+  .text              ro code   0x800'0634    0x48  FltToDbl.o [3]
+  .text              ro code   0x800'067c   0x1aa  DblMul.o [3]
+  .text              ro code   0x800'0828    0x68  DblToFlt.o [3]
+  .text              ro code   0x800'0890   0x134  gpio.o [1]
+  .text              ro code   0x800'09c4    0xb4  system_stm32f3xx.o [1]
+  .text              ro code   0x800'0a78    0xa4  tim.o [1]
+  .text              ro code   0x800'0b1c    0x3c  main.o [1]
   .text              ro code   0x800'0b58    0x28  data_init.o [4]
   .text              ro code   0x800'0b80    0x22  fpinit_M.o [3]
   .iar.init_table    const     0x800'0ba4    0x10  - Linker created -
@@ -154,28 +154,26 @@ No sections matched the following patterns:
   Initializer bytes  const     0x800'0d34     0x7  <for P2-1>
                              - 0x800'0d3b   0xbb3
 
-"P2", part 1 of 2:                           0x19
-  P2-1                        0x2000'0000    0x19  <Init block>
+"P2", part 1 of 2:                           0x18
+  P2-1                        0x2000'0000    0x18  <Init block>
     .bss             inited   0x2000'0000     0x8  gyro.o [1]
     .data            inited   0x2000'0008     0x4  system_stm32f3xx.o [1]
     .bss             inited   0x2000'000c     0x4  gyro.o [1]
     .bss             inited   0x2000'0010     0x4  gyro.o [1]
     .bss             inited   0x2000'0014     0x4  gyro.o [1]
-    .bss             inited   0x2000'0018     0x1  gyro.o [1]
-                            - 0x2000'0019    0x19
+                            - 0x2000'0018    0x18
 
 "P2", part 2 of 2:                         0x2000
-  CSTACK                      0x2000'0020  0x2000  <Block>
-    CSTACK           uninit   0x2000'0020  0x2000  <Block tail>
-                            - 0x2000'2020  0x2000
+  CSTACK                      0x2000'0018  0x2000  <Block>
+    CSTACK           uninit   0x2000'0018  0x2000  <Block tail>
+                            - 0x2000'2018  0x2000
 
 Unused ranges:
 
          From           To      Size
          ----           --      ----
    0x800'0d3b   0x803'ffff  0x3'f2c5
-  0x2000'0019  0x2000'001f       0x7
-  0x2000'2020  0x2000'9fff    0x7fe0
+  0x2000'2018  0x2000'9fff    0x7fe8
 
 
 *******************************************************************************
@@ -185,10 +183,10 @@ Unused ranges:
           Address      Size
           -------      ----
 Copy/packbits (__iar_packbits_init_single3)
-    1 source range, total size 0x7 (28% of destination):
+    1 source range, total size 0x7 (29% of destination):
            0x800'0d34   0x7
-    1 destination range, total size 0x19:
-          0x2000'0000  0x19
+    1 destination range, total size 0x18:
+          0x2000'0000  0x18
 
 
 
@@ -204,14 +202,14 @@ command line/config:
 
 C:\Users\murashov_ev\work\disco\Debug\Obj: [1]
     gpio.o                      308
-    gyro.o                      582        6       21
-    main.o                       56
+    gyro.o                      578        6       20
+    main.o                       60
     startup_stm32f303xc.o       660
     stm32f3xx_it.o              560
     system_stm32f3xx.o          180       17        4
     tim.o                       164
     -------------------------------------------------
-    Total:                    2'510       23       25
+    Total:                    2'510       23       24
 
 dl7M_tln.a: [2]
     exit.o                        4
@@ -244,7 +242,7 @@ shb_l.a: [5]
     Gaps                          6        2
     Linker created                        16    8'192
 -----------------------------------------------------
-    Grand Total:              3'346       41    8'217
+    Grand Total:              3'346       41    8'216
 
 
 *******************************************************************************
@@ -257,44 +255,44 @@ Entry                       Address   Size  Type      Object
 .iar.init_table$$Limit   0x800'0bb4          --   Gb  - Linker created -
 ?main                    0x800'0bb5         Code  Gb  cmain.o [4]
 AHBPrescTable            0x800'0c18   0x10  Data  Gb  system_stm32f3xx.o [1]
-BusFault_Handler         0x800'040f    0x2  Code  Gb  stm32f3xx_it.o [1]
-CSTACK$$Base            0x2000'0020          --   Gb  - Linker created -
-CSTACK$$Limit           0x2000'2020          --   Gb  - Linker created -
-DebugMon_Handler         0x800'0415    0x2  Code  Gb  stm32f3xx_it.o [1]
-Delay                    0x800'03c1    0xe  Code  Gb  gyro.o [1]
-EXTI0_IRQHandler         0x800'05d1   0x38  Code  Gb  stm32f3xx_it.o [1]
-EXTI1_IRQHandler         0x800'0441  0x190  Code  Gb  stm32f3xx_it.o [1]
-GPIO_Init                0x800'08df   0xb2  Code  Gb  gpio.o [1]
-GetData                  0x800'035f   0x4e  Code  Gb  gyro.o [1]
-HardFault_Handler        0x800'040b    0x2  Code  Gb  stm32f3xx_it.o [1]
-MemManage_Handler        0x800'040d    0x2  Code  Gb  stm32f3xx_it.o [1]
-NMI_Handler              0x800'0409    0x2  Code  Gb  stm32f3xx_it.o [1]
-PendSV_Handler           0x800'0417    0x2  Code  Gb  stm32f3xx_it.o [1]
-Read                     0x800'0277   0xe8  Code  Gb  gyro.o [1]
+BusFault_Handler         0x800'040b    0x2  Code  Gb  stm32f3xx_it.o [1]
+CSTACK$$Base            0x2000'0018          --   Gb  - Linker created -
+CSTACK$$Limit           0x2000'2018          --   Gb  - Linker created -
+DebugMon_Handler         0x800'0411    0x2  Code  Gb  stm32f3xx_it.o [1]
+Delay                    0x800'03bd    0xe  Code  Gb  gyro.o [1]
+EXTI0_IRQHandler         0x800'05cd   0x38  Code  Gb  stm32f3xx_it.o [1]
+EXTI1_IRQHandler         0x800'043d  0x190  Code  Gb  stm32f3xx_it.o [1]
+GPIO_Init                0x800'08db   0xb2  Code  Gb  gpio.o [1]
+GetData                  0x800'0361   0x4c  Code  Gb  gyro.o [1]
+HardFault_Handler        0x800'0407    0x2  Code  Gb  stm32f3xx_it.o [1]
+MemManage_Handler        0x800'0409    0x2  Code  Gb  stm32f3xx_it.o [1]
+NMI_Handler              0x800'0405    0x2  Code  Gb  stm32f3xx_it.o [1]
+PendSV_Handler           0x800'0413    0x2  Code  Gb  stm32f3xx_it.o [1]
+Read                     0x800'0277   0xea  Code  Gb  gyro.o [1]
 Region$$Table$$Base      0x800'0ba4          --   Gb  - Linker created -
 Region$$Table$$Limit     0x800'0bb4          --   Gb  - Linker created -
-SVC_Handler              0x800'0413    0x2  Code  Gb  stm32f3xx_it.o [1]
-SysTick_Handler          0x800'0419    0x2  Code  Gb  stm32f3xx_it.o [1]
+SVC_Handler              0x800'040f    0x2  Code  Gb  stm32f3xx_it.o [1]
+SysTick_Handler          0x800'0415    0x2  Code  Gb  stm32f3xx_it.o [1]
 SystemCoreClock         0x2000'0008    0x4  Data  Gb  system_stm32f3xx.o [1]
-SystemCoreClockUpdate    0x800'09d5   0x8c  Code  Gb  system_stm32f3xx.o [1]
-SystemInit               0x800'09c9    0xc  Code  Gb  system_stm32f3xx.o [1]
-TIM7_IRQHandler          0x800'041b   0x24  Code  Gb  stm32f3xx_it.o [1]
-TIM7_Init                0x800'0ac7   0x3a  Code  Gb  tim.o [1]
-UsageFault_Handler       0x800'0411    0x2  Code  Gb  stm32f3xx_it.o [1]
+SystemCoreClockUpdate    0x800'09d1   0x8c  Code  Gb  system_stm32f3xx.o [1]
+SystemInit               0x800'09c5    0xc  Code  Gb  system_stm32f3xx.o [1]
+TIM7_IRQHandler          0x800'0417   0x24  Code  Gb  stm32f3xx_it.o [1]
+TIM7_Init                0x800'0ac3   0x3a  Code  Gb  tim.o [1]
+UsageFault_Handler       0x800'040d    0x2  Code  Gb  stm32f3xx_it.o [1]
 Write                    0x800'0189   0xee  Code  Gb  gyro.o [1]
-__NVIC_EnableIRQ         0x800'0895   0x1e  Code  Lc  gpio.o [1]
-__NVIC_EnableIRQ         0x800'0a7d   0x1e  Code  Lc  tim.o [1]
-__NVIC_SetPriority       0x800'08b3   0x2c  Code  Lc  gpio.o [1]
-__NVIC_SetPriority       0x800'0a9b   0x2c  Code  Lc  tim.o [1]
-__aeabi_d2f              0x800'082d         Code  Gb  DblToFlt.o [3]
-__aeabi_dmul             0x800'0681         Code  Gb  DblMul.o [3]
-__aeabi_f2d              0x800'0639         Code  Gb  FltToDbl.o [3]
+__NVIC_EnableIRQ         0x800'0891   0x1e  Code  Lc  gpio.o [1]
+__NVIC_EnableIRQ         0x800'0a79   0x1e  Code  Lc  tim.o [1]
+__NVIC_SetPriority       0x800'08af   0x2c  Code  Lc  gpio.o [1]
+__NVIC_SetPriority       0x800'0a97   0x2c  Code  Lc  tim.o [1]
+__aeabi_d2f              0x800'0829         Code  Gb  DblToFlt.o [3]
+__aeabi_dmul             0x800'067d         Code  Gb  DblMul.o [3]
+__aeabi_f2d              0x800'0635         Code  Gb  FltToDbl.o [3]
 __cmain                  0x800'0bb5         Code  Gb  cmain.o [4]
 __exit                   0x800'0be9   0x14  Code  Gb  exit.o [5]
 __iar_data_init3         0x800'0b59   0x28  Code  Gb  data_init.o [4]
 __iar_init_vfp           0x800'0b81         Code  Gb  fpinit_M.o [3]
 __iar_packbits_init_single3
-                         0x800'03cf   0x3a  Code  Gb  packbits_init_single.o [4]
+                         0x800'03cb   0x3a  Code  Gb  packbits_init_single.o [4]
 __iar_program_start      0x800'0bfd         Code  Gb  cstartup_M.o [4]
 __low_level_init         0x800'0bd3    0x4  Code  Gb  low_level_init.o [2]
 __vector_table           0x800'0000         Data  Gb  startup_stm32f303xc.o [1]
@@ -302,8 +300,7 @@ _call_main               0x800'0bc1         Code  Gb  cmain.o [4]
 _exit                    0x800'0bdd         Code  Gb  cexit.o [4]
 axis                    0x2000'0000    0x8  Data  Gb  gyro.o [1]
 exit                     0x800'0bd7    0x4  Code  Gb  exit.o [2]
-main                     0x800'0b21   0x38  Code  Gb  main.o [1]
-output                  0x2000'0018    0x1  Data  Gb  gyro.o [1]
+main                     0x800'0b1d   0x3c  Code  Gb  main.o [1]
 x_d                     0x2000'000c    0x4  Data  Gb  gyro.o [1]
 y_d                     0x2000'0010    0x4  Data  Gb  gyro.o [1]
 z_d                     0x2000'0014    0x4  Data  Gb  gyro.o [1]
@@ -317,7 +314,7 @@ z_d                     0x2000'0014    0x4  Data  Gb  gyro.o [1]
 
   3'346 bytes of readonly  code memory
      41 bytes of readonly  data memory
-  8'217 bytes of readwrite data memory
+  8'216 bytes of readwrite data memory
 
 Errors: none
 Warnings: none

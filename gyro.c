@@ -1,6 +1,5 @@
 #include "gyro.h"
 
-uint8_t output;
 Axis axis;
 
 uint16_t x;
@@ -48,9 +47,9 @@ void Write(uint8_t address, uint8_t data)
   SETBIT(GPIOE->ODR, CS);
 }
 
-void Read(uint8_t address) 
+uint8_t Read(uint8_t address) 
 {
-  uint8_t i, size;
+  uint8_t i;
   
   CLEARBIT(GPIOE->ODR, CS);    
   /* READ mode */
@@ -80,21 +79,24 @@ void Read(uint8_t address)
   }
   
   /* receive the data byte */
-  size = 8;
+  uint8_t output = 0x0;
+  uint8_t size = 8;
   for (i = 0; i < size; i++)
   {
-    
     output <<= 1;
     /* SCLK = 0 */
     CLEARBIT(GPIOA->ODR, SCLK);
     Delay(125);
-    if (GPIOA->IDR & SDO) output++;
+    if (GPIOA->IDR & SDO) 
+      output++;
     /* SCLK = 1 */
     SETBIT(GPIOA->ODR, SCLK);
     Delay(125);
   }
   
   SETBIT(GPIOE->ODR, CS);
+  
+  return output;
 }
 
 void GetData(uint8_t address)
@@ -102,8 +104,7 @@ void GetData(uint8_t address)
   axis.output = 0;
   while (address >= OUT_X_L)
   {
-    Read(address);
-    axis.output |= output;
+    axis.output |= Read(address);
     if (address-- > OUT_X_L)
       axis.output <<= 8;
   }

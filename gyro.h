@@ -25,8 +25,6 @@
 #define INT1_CFG                        0x30
 #define INT1_SRC                        0x31
 
-extern uint8_t output;
-
 extern float x_d, y_d, z_d;
 
 typedef union 
@@ -43,7 +41,7 @@ typedef union
 extern Axis axis;
 
 void Write(uint8_t address, uint8_t data);
-void Read(uint8_t address);
+uint8_t Read(uint8_t address);
 void GetData(uint8_t address);
 void Delay(uint16_t time);
 

@@ -208,11 +208,6 @@ void EXTI0_IRQHandler(void)
   }
   
   TIM7->CR1 |=  TIM_CR1_CEN;
-  
-  //TIM7->CR1 &= ~TIM_CR1_CEN;
-  //(TIM7->ARR < 1000) ? (TIM7->ARR += 100) : (TIM7->ARR = 100 - 1);
-  //TIM7->SR = 0;
-  //TIM7->CR1 |= TIM_CR1_CEN;
 }
 
 /**
