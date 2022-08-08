@@ -44,6 +44,11 @@ build C$:\Users\murashov_ev\work\disco\Debug\BrowseInfo\stm32f3xx_it.xcl : COMPI
   flags = C$:\Users\murashov_ev\work\disco\stm32f3xx_it.c -D STM32F3xx -D STM32F303xC -D STM32F30xC -o C$:\Users\murashov_ev\work\disco\Debug\Obj\ --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=VFPv4_sp --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\inc\c\DLib_Config_Full.h" -I C$:\Users\murashov_ev\work\disco\..\inc\ -I C$:\Users\murashov_ev\work\disco\STM32CubeF3\Drivers\CMSIS\Device\ST\STM32F3xx\Include\ -I C$:\Users\murashov_ev\work\disco\STM32CubeF3\Drivers\CMSIS\Include\ -I C$:\Users\murashov_ev\work\disco\STM32CubeF3\Drivers\STM32F3xx_HAL_Driver\Inc\ -On -I "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\CMSIS\Core\Include\\" -I "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\CMSIS\DSP\Include\\" --predef_macros C$:\Users\murashov_ev\work\disco\Debug\BrowseInfo\stm32f3xx_it.tmp
   rspfile_name = C$:\Users\murashov_ev\work\disco\Debug\BrowseInfo\stm32f3xx_it.xcl.rsp
 
+build C$:\Users\murashov_ev\work\disco\Debug\BrowseInfo\system_stm32f3xx.xcl : COMPILER_XCL 
+  xclcommand = -source_file C$:\Users\murashov_ev\work\disco\STM32CubeF3\Drivers\CMSIS\Device\ST\STM32F3xx\Source\Templates\system_stm32f3xx.c -xcl_file C$:\Users\murashov_ev\work\disco\Debug\BrowseInfo\system_stm32f3xx.xcl -macro_file C$:\Users\murashov_ev\work\disco\Debug\BrowseInfo\system_stm32f3xx.tmp -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\bin\iccarm.exe"
+  flags = C$:\Users\murashov_ev\work\disco\STM32CubeF3\Drivers\CMSIS\Device\ST\STM32F3xx\Source\Templates\system_stm32f3xx.c -D STM32F3xx -D STM32F303xC -D STM32F30xC -o C$:\Users\murashov_ev\work\disco\Debug\Obj\ --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=VFPv4_sp --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\inc\c\DLib_Config_Full.h" -I C$:\Users\murashov_ev\work\disco\..\inc\ -I C$:\Users\murashov_ev\work\disco\STM32CubeF3\Drivers\CMSIS\Device\ST\STM32F3xx\Include\ -I C$:\Users\murashov_ev\work\disco\STM32CubeF3\Drivers\CMSIS\Include\ -I C$:\Users\murashov_ev\work\disco\STM32CubeF3\Drivers\STM32F3xx_HAL_Driver\Inc\ -On -I "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\CMSIS\Core\Include\\" -I "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\CMSIS\DSP\Include\\" --predef_macros C$:\Users\murashov_ev\work\disco\Debug\BrowseInfo\system_stm32f3xx.tmp
+  rspfile_name = C$:\Users\murashov_ev\work\disco\Debug\BrowseInfo\system_stm32f3xx.xcl.rsp
+
 build C$:\Users\murashov_ev\work\disco\Debug\BrowseInfo\tim.xcl : COMPILER_XCL 
   xclcommand = -source_file C$:\Users\murashov_ev\work\disco\tim.c -xcl_file C$:\Users\murashov_ev\work\disco\Debug\BrowseInfo\tim.xcl -macro_file C$:\Users\murashov_ev\work\disco\Debug\BrowseInfo\tim.tmp -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\bin\iccarm.exe"
   flags = C$:\Users\murashov_ev\work\disco\tim.c -D STM32F3xx -D STM32F303xC -D STM32F30xC -o C$:\Users\murashov_ev\work\disco\Debug\Obj\ --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=VFPv4_sp --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\inc\c\DLib_Config_Full.h" -I C$:\Users\murashov_ev\work\disco\..\inc\ -I C$:\Users\murashov_ev\work\disco\STM32CubeF3\Drivers\CMSIS\Device\ST\STM32F3xx\Include\ -I C$:\Users\murashov_ev\work\disco\STM32CubeF3\Drivers\CMSIS\Include\ -I C$:\Users\murashov_ev\work\disco\STM32CubeF3\Drivers\STM32F3xx_HAL_Driver\Inc\ -On -I "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\CMSIS\Core\Include\\" -I "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\CMSIS\DSP\Include\\" --predef_macros C$:\Users\murashov_ev\work\disco\Debug\BrowseInfo\tim.tmp
@@ -65,6 +70,10 @@ build C$:\Users\murashov_ev\work\disco\Debug\BrowseInfo\stm32f3xx_it.pbi : INDEX
 C$:\Users\murashov_ev\work\disco\stm32f3xx_it.c
   flags = -out=C$:\Users\murashov_ev\work\disco\Debug\BrowseInfo\stm32f3xx_it.pbi -f C$:\Users\murashov_ev\work\disco\Debug\BrowseInfo\stm32f3xx_it.xcl
 
+build C$:\Users\murashov_ev\work\disco\Debug\BrowseInfo\system_stm32f3xx.pbi : INDEXER C$:\Users\murashov_ev\work\disco\Debug\BrowseInfo\system_stm32f3xx.xcl |  $
+C$:\Users\murashov_ev\work\disco\STM32CubeF3\Drivers\CMSIS\Device\ST\STM32F3xx\Source\Templates\system_stm32f3xx.c
+  flags = -out=C$:\Users\murashov_ev\work\disco\Debug\BrowseInfo\system_stm32f3xx.pbi -f C$:\Users\murashov_ev\work\disco\Debug\BrowseInfo\system_stm32f3xx.xcl
+
 build C$:\Users\murashov_ev\work\disco\Debug\BrowseInfo\tim.pbi : INDEXER C$:\Users\murashov_ev\work\disco\Debug\BrowseInfo\tim.xcl |  $
 C$:\Users\murashov_ev\work\disco\tim.c
   flags = -out=C$:\Users\murashov_ev\work\disco\Debug\BrowseInfo\tim.pbi -f C$:\Users\murashov_ev\work\disco\Debug\BrowseInfo\tim.xcl
@@ -80,8 +89,9 @@ build C$:\Users\murashov_ev\work\disco\Debug\BrowseInfo\discovery_part1.pbi : PD
 C$:\Users\murashov_ev\work\disco\Debug\BrowseInfo\stm32f3xx_it.pbi
   flags = -M C$:\Users\murashov_ev\work\disco\Debug\BrowseInfo\discovery_part1.pbi C$:\Users\murashov_ev\work\disco\Debug\BrowseInfo\main.pbi C$:\Users\murashov_ev\work\disco\Debug\BrowseInfo\stm32f3xx_it.pbi
 
-build C$:\Users\murashov_ev\work\disco\Debug\BrowseInfo\discovery_part2.pbi : PDBLINK C$:\Users\murashov_ev\work\disco\Debug\BrowseInfo\tim.pbi
-  flags = -M C$:\Users\murashov_ev\work\disco\Debug\BrowseInfo\discovery_part2.pbi C$:\Users\murashov_ev\work\disco\Debug\BrowseInfo\tim.pbi
+build C$:\Users\murashov_ev\work\disco\Debug\BrowseInfo\discovery_part2.pbi : PDBLINK C$:\Users\murashov_ev\work\disco\Debug\BrowseInfo\system_stm32f3xx.pbi |  $
+C$:\Users\murashov_ev\work\disco\Debug\BrowseInfo\tim.pbi
+  flags = -M C$:\Users\murashov_ev\work\disco\Debug\BrowseInfo\discovery_part2.pbi C$:\Users\murashov_ev\work\disco\Debug\BrowseInfo\system_stm32f3xx.pbi C$:\Users\murashov_ev\work\disco\Debug\BrowseInfo\tim.pbi
 
 build C$:\Users\murashov_ev\work\disco\Debug\BrowseInfo\discovery.pbd : PDBLINK C$:\Users\murashov_ev\work\disco\Debug\BrowseInfo\discovery_part0.pbi |  $
 C$:\Users\murashov_ev\work\disco\Debug\BrowseInfo\discovery_part1.pbi $

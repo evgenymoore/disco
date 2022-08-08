@@ -154,7 +154,7 @@
                     <item>(int)x_d</item>
                     <item>(int)y_d</item>
                     <item>(int)z_d</item>
-                    <item></item>
+                    <item />
                 </expressions>
                 <col-names>
                     <item>Expression</item>
